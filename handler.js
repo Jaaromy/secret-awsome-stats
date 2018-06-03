@@ -36,10 +36,13 @@ module.exports.downloads = (event, context, callback) => {
 
 				const response = {
 					statusCode: 200,
+					headers: {
+						'Content-Type': 'application/json'
+					},
 					body: JSON.stringify({
 						message: 'Downloads',
 						data: retData,
-					}),
+					}, null, 2),
 				};
 
 				callback(null, response);
