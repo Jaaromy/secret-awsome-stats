@@ -5,7 +5,7 @@ const https = require('https');
 module.exports.downloads = (event, context, callback) => {
 	https.get({
 			hostname: 'api.github.com',
-			path: '/repos/observian/aws-ssm-parameter-manager/releases/latest',
+			path: '/repos/observian/secret-awsome/releases/latest',
 			headers: {
 				'User-Agent': 'secret-awsome-stats'
 			}
